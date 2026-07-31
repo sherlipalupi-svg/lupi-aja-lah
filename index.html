@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Retno Sherli Palupi</title>
+<style>
+  :root{
+    --pink:#f28cb1;
+    --purple:#7c5aa6;
+    --blue:#5a8ac6;
+    --brown:#7a5138;
+    --black:#2b2b2b;
+    --red:#d9495c;
+    --cream:#fff8f2;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:'Trebuchet MS', 'Segoe UI', sans-serif;
+    background:var(--cream);
+    color:var(--black);
+    padding-bottom:70px; /* ruang untuk tab bar bawah */
+  }
+
+  /* HEADER unik: diagonal split, bukan hero polos */
+  header{
+    position:relative;
+    background:var(--purple);
+    color:#fff;
+    padding:50px 24px 70px;
+    overflow:hidden;
+  }
+  header::after{
+    content:"";
+    position:absolute;left:0;right:0;bottom:-1px;height:60px;
+    background:var(--cream);
+    clip-path:polygon(0 100%, 100% 0, 100% 100%, 0% 100%);
+  }
+  header h1{font-size:1.9em;}
+  header .badge{
+    display:inline-block;background:rgba(255,255,255,0.18);
+    padding:4px 14px;border-radius:20px;font-size:0.85em;margin-top:10px;
+  }
+  header p.tagline{margin-top:14px;font-size:1.05em;max-width:420px;}
+
+  section{padding:36px 20px;max-width:640px;margin:0 auto;}
+  section h2{
+    color:var(--red);font-size:1.4em;margin-bottom:20px;
+    border-left:5px solid var(--pink);padding-left:12px;
+  }
+
+  /* Cerita ala diary, bukan card grid */
+  .diary{
+    background:#fff;border-radius:0 18px 18px 18px;
+    padding:18px 20px;margin-bottom:16px;
+    box-shadow:0 3px 10px rgba(0,0,0,0.06);
+    border-left:4px solid var(--blue);
+  }
+  .diary span.tag{
+    display:inline-block;font-size:0.75em;color:var(--purple);
+    font-weight:bold;margin-bottom:6px;
+  }
+
+  /* Warna favorit sebagai swatch bulat, bukan progress bar */
+  .swatches{display:flex;gap:12px;flex-wrap:wrap;margin-top:10px;}
+  .swatch{width:46px;height:46px;border-radius:50%;box-shadow:0 2px 6px rgba(0,0,0,0.15);}
+
+  /* Kemampuan sebagai tag cloud, bukan bar */
+  .tagcloud{display:flex;flex-wrap:wrap;gap:10px;margin-top:6px;}
+  .tagcloud span{
+    background:var(--pink);color:#fff;padding:8px 16px;
+    border-radius:20px;font-size:0.9em;
+  }
+  .tagcloud span:nth-child(2n){background:var(--blue);}
+  .tagcloud span:nth-child(3n){background:var(--purple);}
+
+  /* Kontak sebagai daftar chip horizontal-scroll, bukan kartu stack */
+  .contact-row{display:flex;flex-direction:column;gap:10px;margin-top:10px;}
+  .contact-row a, .contact-row div{
+    display:flex;align-items:center;gap:10px;
+    background:#fff;padding:12px 16px;border-radius:12px;
+    text-decoration:none;color:var(--black);
+    box-shadow:0 2px 6px rgba(0,0,0,0.06);
+  }
+
+  /* Tab bar bawah, ganti nav atas */
+  nav.tabbar{
+    position:fixed;bottom:0;left:0;right:0;
+    background:#fff;display:flex;justify-content:space-around;
+    padding:10px 0;box-shadow:0 -2px 10px rgba(0,0,0,0.08);
+  }
+  nav.tabbar a{
+    color:var(--purple);text-decoration:none;font-size:0.8em;
+    display:flex;flex-direction:column;align-items:center;gap:2px;
+  }
+  nav.tabbar a .ic{font-size:1.3em;}
+
+  footer{text-align:center;padding:20px;color:#999;font-size:0.85em;}
+</style>
+</head>
+<body>
+
+<header id="beranda">
+  <span class="badge">Website Pribadi</span>
+  <h1>Retno Sherli Palupi</h1>
+  <p class="tagline">Panggil aja Retno, Sherli, Palupi, Lupi, atau Upi — bebas! Ini ruang kecil tempat aku cerita tentang diriku 🌷</p>
+</header>
+
+<section id="tentang">
+  <h2>Cerita Tentangku</h2>
+  <div class="diary">
+    <span class="tag">SEKOLAH</span>
+    <p>Sekarang aku sekolah di SMK Ma'arif NU 01 Ajibarang.</p>
+  </div>
+  <div class="diary">
+    <span class="tag">HOBI</span>
+    <p>Aku suka menyanyi dan bercerita — dua hal yang bikin aku betah lama-lama ngobrol atau nyanyi sendiri.</p>
+  </div>
+  <div class="diary">
+    <span class="tag">SUKA BANGET</span>
+    <p>Karakter Lotso itu favoritku, dan ya... aku juga suka uang, hehe 💰</p>
+  </div>
+
+  <h2 style="margin-top:30px;">Warna Favorit</h2>
+  <div class="swatches">
+    <div class="swatch" style="background:#f28cb1;"></div>
+    <div class="swatch" style="background:#5a8ac6;"></div>
+    <div class="swatch" style="background:#7a5138;"></div>
+    <div class="swatch" style="background:#2b2b2b;"></div>
+    <div class="swatch" style="background:#7c5aa6;"></div>
+    <div class="swatch" style="background:#d9495c;"></div>
+  </div>
+</section>
+
+<section id="skill">
+  <h2>Yang Aku Bisa</h2>
+  <div class="tagcloud">
+    <span>Menyanyi</span>
+    <span>Bercerita</span>
+    <span>HTML</span>
+    <span>CSS</span>
+  </div>
+  <p style="color:#999;font-size:0.85em;margin-top:10px;">*tambah sendiri skill lain yang kamu punya ya</p>
+</section>
+
+<section id="kontak">
+  <h2>Sapa Aku</h2>
+  <div class="contact-row">
+    <div>📧 palupi@gmail.com</div>
+    <div>📱 +62 8xx-xxxx-xxxx</div>
+    <div>📍 Ajibarang, Indonesia</div>
+  </div>
+  <p style="color:#999;font-size:0.85em;margin-top:10px;">*ganti dengan kontak asli kamu</p>
+</section>
+
+<footer>Dibuat oleh Retno Sherli Palupi · 2026</footer>
+
+<nav class="tabbar">
+  <a href="#beranda"><span class="ic">🏠</span>Beranda</a>
+  <a href="#tentang"><span class="ic">📖</span>Cerita</a>
+  <a href="#skill"><span class="ic">⭐</span>Skill</a>
+  <a href="#kontak"><span class="ic">💬</span>Sapa</a>
+</nav>
+
+</body>
+  </html>
